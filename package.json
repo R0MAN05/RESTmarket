@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "//" : "below we made the server run by npm run dev command using dev",
-    "dev": "node backend/server.js"   
-    
+    "//": "below we made the server run by npm run dev command using dev",
+    "dev": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +15,8 @@
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
