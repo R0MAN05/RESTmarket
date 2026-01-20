@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "//": "below we made the server run by npm run dev command using dev",
-    "dev": "node backend/server.js"
+    "dev": "nodemon backend/server.js"
   },
   "keywords": [],
   "author": "",
