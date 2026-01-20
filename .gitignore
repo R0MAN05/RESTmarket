@@ -1,0 +1,12 @@
+# --- Build & Dependency Folders ---
+node_modules/
+
+# --- Environment & Secrets ---
+.env
+
+
+
+
+
+
+
