@@ -1,12 +1,6 @@
-# --- Build & Dependency Folders ---
+# Dependencies
 node_modules/
 
-# --- Environment & Secrets ---
+# Environment secrets
 .env
-
-
-
-
-
-
-
+.env.local
