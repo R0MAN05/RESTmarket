@@ -39,7 +39,7 @@ export async function addProduct(req, res) {
 
     try {   
         await newProduct.save();    //this is gonna save the model to the database.
-        res.status(201).json({ success: true, data: newProduct});   // 201 means something created successfully and data: newProduct means we(user) created this successfully.
+        res.status(201).json({ success: true, data: newProduct, message: "Product created successfully" });   // 201 means something created successfully and data: newProduct means we(user) created this successfully.
     } catch (error) {
         console.log("Error in Create product:", error.message);
         res.status(500).json({ success: false, message: "Server Error" })   //used 500 cuz this error would be Internal Server Error.
@@ -57,7 +57,7 @@ export async function updateProduct(req, res) {
 
     try {
         const updatedProduct = await Product.findByIdAndUpdate(id, product, {new:true});
-        res.status(200).json({success: true, data: updatedProduct});
+        res.status(200).json({success: true, data: updatedProduct, message: "Product updated successfully"});
     } catch (error) {
         console.log("Error in Fetch product", error.message);
         res.status(500).json({success: false, message: "Server Error"});
