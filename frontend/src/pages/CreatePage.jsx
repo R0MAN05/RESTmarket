@@ -50,9 +50,9 @@ const CreatePage = () => {
             <span className="text-sm sm:text-base">Back to Products</span>
           </Link>
 
-          <div className="card border border-primary shadow-lg">
+          <div className="card border border-primary bg-base-200 shadow-lg">
             <div className="card-body p-4 sm:p-6 md:p-8">
-              <h2 className="card-title text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6">Add New Product</h2>
+              <h2 className="card-title text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6 font-bold text-primary">Add New Product</h2>
 
               <form className="space-y-4 md:space-y-5">
                 <div className="form-control">
