@@ -33,8 +33,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../Frontend/dist"))); //basically means, serve our optimized react app (with dist) as a static assets.
 
   // Express 5 specific "catch-all" syntax
-  app.get("/:slug*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+  app.get("/{*splat}", (req, res) => {
+    res.sendFile(path.join(__dirname, "../Frontend", "dist", "index.html"));
   });
 }
 
