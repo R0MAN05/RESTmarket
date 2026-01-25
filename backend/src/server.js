@@ -1,7 +1,7 @@
 import express from "express"; //ES module
 import dotenv from "dotenv";
 import path from "path";
-import cors from "cors"; 
+import cors from "cors";
 
 import productRoutes from "./routes/product.routes.js";
 import { connectDB } from "../config/db.js";
@@ -32,8 +32,8 @@ app.use("/api/products", productRoutes);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../Frontend/dist"))); //basically means, serve our optimized react app (with dist) as a static assets.
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../Frontend", "dist", "index.html"));
+  app.get("{*}", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
   });
 }
 
