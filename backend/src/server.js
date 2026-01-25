@@ -30,11 +30,11 @@ app.use("/api/products", productRoutes);
 
 //this if statement is, run the {.....} command if we are in the production state in render.com
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../Frontend/dist"))); //basically means, serve our optimized react app (with dist) as a static assets.
+  app.use(express.static(path.join(__dirname, "../frontend/dist"))); //basically means, serve our optimized react app (with dist) as a static assets.
 
   // Express 5 specific "catch-all" syntax
   app.get("/{*splat}", (req, res) => {
-    res.sendFile(path.join(__dirname, "../Frontend", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
 
